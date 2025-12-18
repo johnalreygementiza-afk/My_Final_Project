@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url("OIP\ \(3\).webp") no-repeat center/ cover;
+            padding: 30px 5%;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+
+        }
+
+        .container {
+            position: relative;
+            height: 90%;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, .1);
+            border: solid rgba(255, 255, 255, .2);
+            border-radius: 30px;
+            box-shadow: black 0 0 30px;
+            backdrop-filter: blur(10px);
+            transform: scale(0);
+            animation: zoom-in 1s ease forwards;
+
+
+        }
+
+        @keyframes zoom-in {
+            100% {
+                transform: scale(1)
+            }
+
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 30px;
+            width: 100%;
+            padding: 30px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 100;
+
+        }
+
+        .animated {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        @keyframes slide-in {
+            100% {
+
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px;
+            border-bottom: 3px solid transparent;
+            transition: .8s;
+            margin-left: 50px 0;
+            text-shadow: 5px 5px 30px rgb(0, 0, 0);
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: white;
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+        .navbar a:active {
+            border-color: rgb(232, 232, 232);
+            color: rgb(232, 232, 232);
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+        .home {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 50px;
+            padding: 50px 5% 0;
+            color: rgb(255, 255, 255);
+            text-shadow: rgb(34, 34, 34) 0 0 10px;
+            font-family: 'Times New Roman', Times, serif;
+            animation-delay: 1.5s;
+        }
+
+
+        @keyframes zoom-in {
+            100% {
+                transform: scale(1)
+            }
+        }
+
+        .return-btn:active {
+            transform: scale(0.8);
+            box-shadow: rgb(255, 255, 255) 0 0 30px;
+        }
+
+        .return-btn:hover {
+            box-shadow: white 0 0 30px;
+        }
+
+        .home-detail h1 {
+            font-size: 40px;
+            line-height: 1;
+            color: darkgreen;
+            text-shadow: rgb(255, 255, 255) 0 0 30px;
+            padding: 5px;
+        }
+
+        .home-detail h1:hover {
+            text-shadow: white 0 0 30px;
+        }
+
+        .home-detail h2 {
+            font-size: 30px;
+            text-decoration: none;
+            margin: 15x 0 20px;
+            color: darkgoldenrod;
+            text-shadow: white 0 0 30px;
+
+
+
+        }
+
+
+        .home-detail p {
+            margin: 15px 0 20px;
+            color: white;
+            margin-bottom: 50px;
+            font-size: 18px;
+
+        }
+
+
+
+        .home-detail .dowload-social {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid white;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgb(192, 191, 191);
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: .5s;
+        }
+
+        .btn:hover {
+            background: transparent;
+            box-shadow: none;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .btn:active {
+            background: rgb(255, 255, 255);
+            box-shadow: 0 0 10px rgb(192, 191, 191);
+            color: #333;
+            box-shadow: 0 0 10px rgb(192, 191, 191);
+        }
+
+        .home-detail .social-icons {
+            margin: 20px;
+        }
+
+        .home-detail .social-icons a {
+            display: inline-flex;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 50%;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: .5s;
+            margin: 5px 8px;
+
+        }
+
+        .home-detail .social-icons a:hover {
+            background: white;
+            box-shadow: 0 0 30px rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+        }
+
+        .home-detail .social-icons a:active {
+            background: rgb(0, 0, 0);
+            box-shadow: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .home-img .img-box {
+            position: relative;
+            width: 23vw;
+            height: 23vw;
+            border: 3px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            box-shadow: white 0 0 30px;
+            overflow: clip;
+            margin-bottom: 30px;
+            margin-left: 30px;
+        }
+
+        .home-img .img-box:hover {
+            transform: scale(1.05);
+            box-shadow: rgb(255, 255, 255) 0 0 50px;
+            border: 3px solid rgb(255, 255, 255);
+        }
+
+        .home-img .img-box img {
+            position: absolute;
+            display: block;
+            bottom: 2px;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .home-img .img-box img {
+
+            box-shadow: rgb(255, 255, 255) 0 0 30px;
+        }
+
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 20px white;
+            border: 2px solid white;
+            margin-bottom: none;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 10px;
+            animation-delay: 1.5s;
+
+        }
+
+        .return-btn {
+            top: 1px;
+            padding: 10px;
+            position: absolute;
+            width: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: 3px solid white;
+            margin-left: 88.4%;
+            top: 20px;
+            animation: zoom-in 1s ease forwards;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body> <button class="return-btn animted" onclick="location.href='index.html'">Log out</button>
+
+    <div class="container">
+        <div class=" login-box">
+            <img class="login-logo animated" src="TCGC logo.png" alt="TCGC School Logo">
+            <header class="animated">
+                <nav class="navbar">
+                    <a href="First Page.html">Personal reflection</a>
+                    <a href="Second Page.html">community service</a>
+                    <a href="Third Page.html">Inspiritional Portfolio</a>
+                    <a href="Fourth Page.html">Educational Page</a>
+                    <a href="Fifth Page.html">Faith & Technology Integration</a>
+                </nav>
+            </header>
+
+
+
+            <section class="home animated">
+                <div class="home-detail">
+                    <h1>John Alrey D. Gementiza</h1>
+                    <h2> College student</h2>
+                    <p>Hi, I'm John Alrey D. Gementiza, a college student passionate about web development and
+                        design.<br>
+                        I love creating user-friendly websites and exploring new technologies in the digital world.
+                    </p>
+                    <div class="dowload-social">
+                        <a href="https://www.bing.com" class="btn">Download CV</a>
+                        <div class="social-icons">
+                            <a href="https://github.com/"><i class="ri-github-fill"></i></a>
+                            <a href="https://www.linkedin.com/"><i class="ri-linkedin-fill"></i></a>
+                            <a href="https://x.com/"><i class="ri-twitter-fill"></i></a>
+                            <a href="https://www.youtube.com/"><i class="ri-youtube-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="home-img">
+                        <div class="img-box">
+                            <img src="JOHNALREY PICS.jpg" alt="John Alrey D. Gementiza">
+                        </div>
+                    </div>
+            </section>
+</body>
+
+</html>

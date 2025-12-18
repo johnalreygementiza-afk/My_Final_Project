@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Reflection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(38, 95, 194);
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: arial;
+            font-size: uppercase;
+            padding: 30px;
+            border-bottom: 3px solid rgb(37, 36, 36);
+            text-shadow: rgb(214, 219, 213) 0 0 30px;
+        }
+
+        h1:hover {
+
+            text-shadow: rgb(255, 255, 255) 0 0 30px;
+
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            text-align: center;
+            margin: 0;
+            color: #575454;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: white 0 0 20px;
+
+        }
+
+        p:hover {
+            text-align: center;
+
+        }
+
+        p:hover,
+        p:active {
+            border-color: rgb(219, 239, 7);
+            text-shadow: rgb(222, 113, 4);
+        }
+
+        section {
+            top: 59px;
+            left: 50px;
+            right: 30px;
+            width: 100%;
+            padding: 30px 0;
+            z-index: 100;
+
+        }
+
+
+        .animated {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 1s ease forwards;
+            animation-delay: 0s;
+        }
+
+        @keyframes slide-in {
+            100% {
+
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #000000;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            padding: 5px;
+
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px;
+            box-shadow: rgb(0, 0, 0) 0 0 30px;
+            margin-bottom: 5px;
+
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 30px;
+            margin: 0;
+            padding: 30px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 100;
+
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px;
+            border-bottom: 3px solid transparent;
+            transition: .8s;
+            text-shadow: 5px 5px 30px rgb(0, 0, 0);
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: white;
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+        }
+
+        .navbar a:active {
+            border-color: rgb(232, 232, 232);
+            color: rgb(232, 232, 232);
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+        }
+
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 20px white;
+            border: 2px solid white;
+            margin-bottom: none;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: space-between;
+            gap: 150px;
+            padding: 90px;
+            margin: 40px;
+            background-color: rgba(255, 255, 255, .1);
+            border: solid rgba(255, 255, 255, .2);
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            transform: scale(0);
+            animation: zoom-in 2s ease forwards;
+            box-shadow: rgb(0, 0, 0) 0 0 30px;
+            margin-bottom: 50px;
+
+
+        }
+
+        @keyframes zoom-in {
+            100% {
+                transform: scale(1)
+            }
+
+
+        }
+
+
+        .card {
+            width: 250px;
+            border: 4px solid rgb(0, 0, 0);
+            padding: 5px;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            width: 100%;
+            text-align: left;
+            border-radius: 10px;
+            border-bottom: 5px solid rgb(0, 0, 0);
+            border-right: 10px solid rgb(0, 0, 0);
+            box-shadow: black 0 0 30px;
+            animation: all 2s ease;
+
+        }
+
+        .card:hover {
+
+            transform: scale(1.05);
+
+
+        }
+
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            text-shadow: rgb(182, 178, 178) 0 0 20px;
+
+
+
+        }
+
+        .card:hover {
+
+            box-shadow: rgb(253, 253, 253) 0 0 30px;
+
+        }
+
+        marquee {
+            font-size: 50px;
+            border-right: 3px solid black;
+            color: rgb(0, 0, 0);
+            font-weight: 800;
+            text-decoration: italic;
+
+        }
+
+        marquee:hover {
+            text-shadow: white 0 0 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" login-box">
+        <img class="login-logo animated" src="TCGC logo.png" alt="TCGC School Logo">
+        <header class="animated">
+            <nav class="navbar">
+                <a href="First Page.html" class="active">Personal reflection</a>
+                <a href="Second Page.html">community service</a>
+                <a href="Third Page.html">Inspiritional Portfolio</a>
+                <a href="Fourth Page.html">Educational Page</a>
+                <a href="Fifth Page.html">Faith & Technology Integration</a>
+            </nav>
+        </header>
+
+        <div class="nav">
+            <marquee behavior="circketoalternate" diretion="left"><i
+                    style="font-family: 'Times New Roman', Times, serif;">Una ang Ginoo</i></marquee>
+            <h1>Reflections: Inspiration in Faith, Integrity, and Digital Citizenship</h1>
+        </div>
+
+
+        <section class="animated">
+            <div class="container ">
+                <div class="card">
+                    <h2>Faith</h2>
+                    <p>
+                        <strong><i
+                                style="color: rgb(0, 0, 0); font-size: 22px;font-family: 'Times New Roman', Times, serif;">Faith</i></strong>
+                        gives
+                        us the strength to pursue what
+                        is
+                        good
+                        even in
+                        uncertain times.
+                        It inspires hope, resilience, and a sense of purpose. By trusting in something greater,
+                        we find courage to act with compassion and become sources of light for others.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2>Integrity</h2>
+                    <p>
+                        <strong><i
+                                style="color: rgb(0, 0, 0);font-size:22px;font-family: 'Times New Roman', Times, serif;">Integrity</i></strong>
+                        means
+                        doing what is right even
+                        when
+                        no one
+                        is
+                        watching.
+                        Living with integrity builds trust and respect.Our actions online and offline
+                        should reflect honesty and authenticity, inspiring others to uphold these values.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2>Responsible<br> Digital Citizenship</h2>
+                    <p>
+                        In today's digital world, being a <i><b
+                                style="color: rgb(0, 0, 0);font-size: 22px;font-family: 'Times New Roman', Times, serif">responsible
+                                digital
+                                citizen</b></i> is essential.
+                        This means thinking critically, respecting others' privacy, and spreading kindness online.
+                        By acting ethically and making informed decisions, we contribute to a better, safer digital
+                        community.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            &copy; 2025 Inspiration Project | Embrace Faith, Integrity, and Responsible Digital Citizenship
+        </footer>
+    </div>
+
+</body>
+
+</html>

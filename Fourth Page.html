@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Page</title>
+    <style>
+        body {
+            background-color: rgb(38, 95, 194);
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 30px;
+            width: 100%;
+            padding: 30px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 100;
+            width: 100%;
+
+        }
+
+        .animated {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 4s ease forwards;
+            animation-delay: 2;
+        }
+
+        @keyframes slide-in {
+            100% {
+
+                transform: translateY(1);
+                opacity: 1;
+
+            }
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .wrap {
+            padding: 5px;
+            background: linear-gradient(180deg, #bbac06, #8fe406);
+            border-radius: 30px;
+            box-shadow: rgb(139, 139, 139) 0 0 30px;
+            transform: scale(1);
+            animation: zoom-in 2s ease forwards;
+
+
+        }
+
+        @keyframes zoom-in {
+            100% {
+                transform: scale(0)
+            }
+        }
+
+
+        h1 {
+            padding: 15px;
+            font-size: 1.6rem;
+            margin: 0
+        }
+
+        .lead {
+            margin: 1px 0 0;
+            color: var(--muted);
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 30px;
+            border-bottom: 3px solid transparent;
+            transition: .8s;
+            margin-left: 50px 0;
+            text-shadow: 5px 5px 30px rgb(0, 0, 0);
+
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: white;
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+        .navbar a:active {
+            border-color: rgb(232, 232, 232);
+            color: rgb(232, 232, 232);
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 20px rgb(255, 255, 255);
+            border: 2px solid white;
+            margin-bottom: none;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 20px;
+
+
+        }
+
+        legend {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        p.lead {
+            margin: 10px 0 0;
+            color: var(--muted)
+        }
+
+        .grid {
+
+            grid-template-columns: 1fr 360px;
+            gap: 24px;
+            margin-top: 22px
+        }
+
+        .muted {
+            background: linear-gradient(180deg, #76cc25, #9ee406);
+            border: 3px solid black;
+            border-radius: 20px;
+            box-shadow: black 0 0 30px;
+            padding: 40px;
+            font-size: 20px;
+            transform: scale(0);
+            animation: zoom-in 2s ease forwards;
+
+
+        }
+
+        @keyframes zoom-in {
+            100% {
+                transform: scale(1)
+            }
+
+        }
+
+
+
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+
+        }
+
+        .principle {
+            padding: 25px;
+            border-radius: 20px;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            border: 1px solid rgba(15, 23, 42, 0.04);
+            box-shadow: rgb(0, 0, 0) 0 0 20px;
+            margin-bottom: 30px;
+        }
+
+        .principle:hover {
+            transform: scale(1.05);
+        }
+
+        .principle h4 {
+            margin: 0 0 2px;
+            font-size: 20px;
+            text-align: center;
+            text-shadow: rgb(255, 255, 255) 0 0 50px;
+            color: rgb(0, 0, 0);
+
+        }
+
+        .principle p {
+            margin: 0;
+            font-size: 15px;
+            color: var(--muted)
+        }
+
+        h3 {
+            text-align: center;
+            margin-right: 40%;
+            margin-left: 39%;
+            border-bottom: 3px solid rgb(26, 151, 204);
+            font-size: 25px;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            text-shadow: white 0 0 30px;
+        }
+
+        h2,
+        p {
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        h2 {
+            border-bottom: 3px solid rgb(26, 151, 204);
+            margin-left: 30%;
+            margin-right: 30%;
+            padding: 20px;
+            text-shadow: white 0 0 30px;
+            color: white;
+        }
+
+        .container {
+            height: 100%;
+            margin-top: 90px;
+            padding: 20px;
+            margin: 50px;
+            background-color: rgba(255, 255, 255, .1);
+            border: solid rgba(255, 255, 255, .2);
+            border-radius: 30px;
+            box-shadow: black 0 0 30px;
+
+
+        }
+
+        .hero {
+
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px #000;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+
+        footer {
+            text-align: center;
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #000000;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            padding: 5px;
+            margin: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <img class="login-logo" src="TCGC logo.png" alt="TCGC School Logo">
+        <header class="animated">
+            <navbar class="navbar">
+                <a href="First Page.html">Personal reflection</a>
+                <a href="Second Page.html">community service</a>
+                <a href="Third Page.html">Inspiritional Portfolio</a>
+                <a href="Fourth Page.html" class="active">Educational Page</a>
+                <a href="Fifth Page.html">Faith & Technology Integration</a>
+            </navbar>
+        </header>
+        <container>
+            <div class="hero animated">
+                <h1>Una ang Ginoo</h1>
+                <p>TCGC Tangub College - Integrating Faith and Digital Ethics</p>
+            </div>
+
+            <div class="container animated">
+                <legend class="wrap">
+
+                    <div>
+                        <h1>Digital Ethics — Be Kind. Be Honest. Be Responsible.</h1>
+                        <p class="lead">Short guide to moral &amp; ethical practices online for students, creators, and
+                            communities.</p>
+                    </div>
+                </legend>
+
+
+                <div class="grid animated">
+                    <section class="card main">
+                        <article aria-labelledby="what">
+                            <h2 id="what">What is digital ethics?</h2>
+                            <p class="muted">Digital ethics means using technology in ways that respect others, value
+                                truth,
+                                and
+                                protect privacy. It covers behavior (how we speak, share, and react) and creation (how
+                                we
+                                produce, cite, and publish digital work).</p>
+                        </article>
+
+                        <section>
+                            <h3>Core principles</h3>
+                            <div class="principles" role="list">
+                                <div class="principle" role="listitem">
+                                    <h4>Kindness</h4>
+                                    <p>Communicate respectfully; challenge ideas, not people. Before posting, ask: would
+                                        I
+                                        say
+                                        this in person?</p>
+                                </div>
+                                <div class="principle" role="listitem">
+                                    <h4>Honesty</h4>
+                                    <p>Be truthful about your work. Don't fabricate sources, results, or authorship.</p>
+                                </div>
+                                <div class="principle" role="listitem">
+                                    <h4>Attribution</h4>
+                                    <p>Credit other creators and cite sources—even when reusing small parts like images
+                                        or
+                                        code
+                                        snippets.</p>
+                                </div>
+                                <div class="principle" role="listitem">
+                                    <h4>Privacy & Consent</h4>
+                                    <p>Respect others' privacy. Ask before sharing private info or images of someone.
+                                    </p>
+                                </div>
+                            </div>
+                </div>
+
+                </section>
+        </container>
+    </div>
+    <footer>&copy; 2025 Inspiration Project |Educational Page</footer>
+</body>
+
+</html>

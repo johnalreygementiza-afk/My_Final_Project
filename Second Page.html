@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>community service</title>
+    <link rel="stylesheet" href="style - Copy.css">
+    <style>
+        body {
+            height: 100vh;
+            background-color: rgb(38, 95, 194);
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 30px;
+            margin: 0;
+            padding: 30px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            z-index: 100;
+
+        }
+
+        .animated {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slide-in 3s ease forwards;
+            animation-delay: 0;
+        }
+
+        @keyframes slide-in {
+            100% {
+
+                transform: translateY(0);
+                opacity: 1;
+
+            }
+        }
+
+        .navbar a {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px;
+            border-bottom: 3px solid transparent;
+            transition: .8s;
+            margin-left: 50px 0;
+            text-shadow: 5px 5px 30px rgb(0, 0, 0);
+            padding-right: 0;
+
+
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
+            text-shadow: white;
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+        .navbar a:active {
+            border-color: rgb(232, 232, 232);
+            color: rgb(232, 232, 232);
+            transition: 0.5s;
+            transform: translate(-10px, -20px);
+
+        }
+
+
+
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 20px white;
+            border: 2px solid white;
+            margin-bottom: none;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 20px;
+            margin-right: 500px;
+            margin-top: 5px;
+            animation-delay: 1.5s;
+
+        }
+
+        h1 {
+            border-top: 5px solid black;
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            border-bottom: 2px solid black;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin: 80px;
+            font-weight: 600;
+            border-radius: 30px;
+            padding: 10px;
+            box-shadow: rgb(167, 166, 166) 0 0 30px;
+            color: rgb(0, 0, 0);
+        }
+
+
+        .carousel {
+            margin: 50px auto;
+            width: 100%;
+            height: 310px;
+            display: flex;
+            overflow-x: auto;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            border-radius: 20px;
+            box-shadow: rgb(0, 0, 0) 0 0 30px;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6em;
+            animation: spin 50s infinite linear;
+            padding-right: 7em;
+
+        }
+
+        .card {
+            flex: 0 0 5em;
+            height: 6em;
+            padding: 0;
+            font-size: 3rem;
+            border-radius: .2em;
+            text-align: top;
+            align-content: center;
+
+
+        }
+
+        @keyframes spin {
+            from {
+                translate: 0;
+            }
+
+            to {
+                translate: -100%;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 130%;
+            border: 2px solid black;
+            border-radius: 20px;
+            animation: all 5s ease
+        }
+
+        img:hover {
+            border: 3px solid rgb(255, 255, 255);
+            box-shadow: rgb(255, 255, 255) 0 0 50px;
+            transform: scale(1.05);
+        }
+
+        .caption {
+            max-width: var(--w);
+            margin: 50px;
+            text-align: center;
+            color: #ffffff;
+            border-top: 3px solid black;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #000000;
+            background: linear-gradient(180deg, #8ebb06, #d0ef02);
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <img class="login-logo" src="TCGC logo.png" alt="TCGC School Logo">
+        <header class="animated">
+            <navbar class="navbar">
+                <a href="First Page.html">Personal reflection</a>
+                <a href="Second Page.html" class="active">community service</a>
+                <a href="Third Page.html">Inspiritional Portfolio</a>
+                <a href="Fourth Page.html">Educational Page</a>
+                <a href="Fifth Page.html">Faith & Technology Integration</a>
+            </navbar>
+        </header>
+        <section class="animated">
+            <h1>Community Service</h1>
+
+
+            <div class="carousel">
+                <div class="group">
+                    <div class="card"><img src="cdb7c525-000c-4aff-b730-c78405422dcb.jpg">
+                    </div>
+                    <div class="card"><img src="01237760-75bf-48f9-8288-0ea7700e49ff.jpg">
+                    </div>
+                    <div class="card"><img src="d50a0e7c-85a1-468f-868a-d554ee3b4bb5 - Copy.jpg">
+                    </div>
+                    <div class="card"><img src="e45670ea-acad-4eee-bc9c-3f0c8fd03b07.jpg">
+                    </div>
+                    <div class="card"><img src="1ef92488-b695-488c-aacd-fccd17dd4cca.jpg">
+                    </div>
+                    <div class="card"><img src="7dfce824-38a4-4588-80f9-a5750a0cfc59.jpg">
+                    </div>
+                </div>
+                <div aria-hidden class="group">
+                    <div class="card"><img src="8b3c68d0-49a0-48ad-a64b-36ac6becab62.jpg">
+                    </div>
+                    <div class="card"><img src="9bfc1a6c-6d6b-4f7a-95bd-88634eb09363.jpg">
+                    </div>
+                    <div class="card"><img src="188c6ccf-a1ab-4298-a16c-f18841120f72.jpg">
+                    </div>
+                    <div class="card"><img src="630df08f-1940-4676-bb84-e07e804d2b3f.jpg">
+                    </div>
+                    <div class="card"><img src="1048e4dc-894a-4989-9c27-83fc4dadab7a.jpg">
+                    </div>
+                    <div class="card"><img src="f485ef5a-02aa-44aa-a3d9-319db8826c59.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="caption animated">
+                <p>Community service refers to voluntary work performed by individuals or groups, just like in TCGC,
+                    ROTC
+                    unit. We help each other
+                    to benefit our community as well as our
+                    institutions. It is distinct from regular volunteering as it can sometimes be mandated by courts or
+                    government
+                    programs. Community service can include various activities, such as helping the elderly, tutoring
+                    children,
+                    cleaning up local parks, or organizing food drives just like it shows the picture.</p>
+        </section>
+    </div>
+    <footer> &copy; 2025 Inspiration Project | Community Service</footer>
+</body>
+
+</html>
